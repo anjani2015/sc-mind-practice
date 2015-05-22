@@ -14,6 +14,9 @@
 		9DCD624C1B0DEDBD009E3AC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD624B1B0DEDBD009E3AC2 /* Images.xcassets */; };
 		9DCD624F1B0DEDBD009E3AC2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD624D1B0DEDBD009E3AC2 /* LaunchScreen.xib */; };
 		9DCD625B1B0DEDBD009E3AC2 /* CoreData_SampleTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD625A1B0DEDBD009E3AC2 /* CoreData_SampleTestTests.swift */; };
+		9DCE884F1B0F133C00B920FF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE884E1B0F133C00B920FF /* DatePickerViewController.swift */; };
+		9DCE88531B0F1AD800B920FF /* DailyDairy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE88521B0F1AD800B920FF /* DailyDairy.m */; };
+		9DCE885B1B0F378800B920FF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE885A1B0F378800B920FF /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,12 @@
 		9DCD62541B0DEDBD009E3AC2 /* CoreData_SampleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreData_SampleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCD62591B0DEDBD009E3AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DCD625A1B0DEDBD009E3AC2 /* CoreData_SampleTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData_SampleTestTests.swift; sourceTree = "<group>"; };
+		9DCE884E1B0F133C00B920FF /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		9DCE88501B0F1AD800B920FF /* CoreData_SampleTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreData_SampleTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		9DCE88511B0F1AD800B920FF /* DailyDairy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyDairy.h; sourceTree = "<group>"; };
+		9DCE88521B0F1AD800B920FF /* DailyDairy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyDairy.m; sourceTree = "<group>"; };
+		9DCE88541B0F1BA700B920FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9DCE885A1B0F378800B920FF /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 		9DCD62331B0DEDBD009E3AC2 = {
 			isa = PBXGroup;
 			children = (
+				9DCE88541B0F1BA700B920FF /* CoreData.framework */,
 				9DCD623E1B0DEDBD009E3AC2 /* CoreData_SampleTest */,
 				9DCD62571B0DEDBD009E3AC2 /* CoreData_SampleTestTests */,
 				9DCD623D1B0DEDBD009E3AC2 /* Products */,
@@ -85,7 +95,12 @@
 				9DCD624B1B0DEDBD009E3AC2 /* Images.xcassets */,
 				9DCD624D1B0DEDBD009E3AC2 /* LaunchScreen.xib */,
 				9DCD62431B0DEDBD009E3AC2 /* CoreData_SampleTest.xcdatamodeld */,
+				9DCE88511B0F1AD800B920FF /* DailyDairy.h */,
+				9DCE88521B0F1AD800B920FF /* DailyDairy.m */,
+				9DCE88501B0F1AD800B920FF /* CoreData_SampleTest-Bridging-Header.h */,
 				9DCD623F1B0DEDBD009E3AC2 /* Supporting Files */,
+				9DCE884E1B0F133C00B920FF /* DatePickerViewController.swift */,
+				9DCE885A1B0F378800B920FF /* HistoryViewController.swift */,
 			);
 			path = CoreData_SampleTest;
 			sourceTree = "<group>";
@@ -215,7 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DCE884F1B0F133C00B920FF /* DatePickerViewController.swift in Sources */,
 				9DCD62471B0DEDBD009E3AC2 /* ViewController.swift in Sources */,
+				9DCE88531B0F1AD800B920FF /* DailyDairy.m in Sources */,
+				9DCE885B1B0F378800B920FF /* HistoryViewController.swift in Sources */,
 				9DCD62451B0DEDBD009E3AC2 /* CoreData_SampleTest.xcdatamodeld in Sources */,
 				9DCD62421B0DEDBD009E3AC2 /* AppDelegate.swift in Sources */,
 			);
@@ -344,10 +362,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CoreData_SampleTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreData_SampleTest/CoreData_SampleTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -355,10 +377,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CoreData_SampleTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreData_SampleTest/CoreData_SampleTest-Bridging-Header.h";
 			};
 			name = Release;
 		};
