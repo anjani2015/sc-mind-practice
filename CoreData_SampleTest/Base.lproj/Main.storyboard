@@ -128,13 +128,13 @@
         <!--History View Controller-->
         <scene sceneID="bo7-Pf-XwT">
             <objects>
-                <viewController id="spD-La-rsf" customClass="HistoryViewController" customModule="CoreData_SampleTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="spD-La-rsf" customClass="HistoryViewController" customModule="CoreData_SampleTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="frB-We-kyd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="wJJ-AB-1cG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="47" width="320" height="521"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -165,12 +165,27 @@
                                     <outlet property="delegate" destination="spD-La-rsf" id="DQz-y0-d5J"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" id="VR0-Fb-Wje">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="My Activity" id="AFG-BC-75j">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="bbU-zg-mLY">
+                                            <color key="tintColor" red="1" green="0.74117647060000003" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="r6t-Kv-eGD" kind="unwind" unwindAction="unWindSegue:" id="zQ7-cn-WWS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="4fw-b4-Of2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRt-Qx-suZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="r6t-Kv-eGD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="586" y="673"/>
         </scene>

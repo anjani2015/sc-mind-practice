@@ -11,6 +11,8 @@ import UIKit
 class HistoryViewController: UIViewController {
 
     var historyData = [DailyDairy]()
+    let appDel = UIApplication.sharedApplication().delegate as AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,9 +27,7 @@ class HistoryViewController: UIViewController {
     
     func loadDairy(){
         var error: NSError? = nil
-        let appDel = UIApplication.sharedApplication().delegate as AppDelegate
         let managedCtx = appDel.managedObjectContext!
-        
         let fetchReq = NSFetchRequest(entityName: "DailyDairy") as NSFetchRequest
         let sortReq = NSSortDescriptor(key: "activityOnDate", ascending: false)
         fetchReq.sortDescriptors = [sortReq]
@@ -60,6 +60,8 @@ class HistoryViewController: UIViewController {
         
         let dataTemp = historyData[indexPath.row]
         
+        cell.textLabel?.lineBreakMode = .ByWordWrapping
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = dataTemp.activityDesc
         cell.detailTextLabel?.text = formatter.stringFromDate(dataTemp.activityOnDate)
         
@@ -68,6 +70,44 @@ class HistoryViewController: UIViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        switch editingStyle {
+        case .Delete:
+            
+            // remove the deleted item from the model
+            let context:NSManagedObjectContext = appDel.managedObjectContext!
+            context.deleteObject(historyData[indexPath.row] as NSManagedObject)
+            historyData.removeAtIndex(indexPath.row)
+            context.save(nil)
+            
+            //tableView.reloadData()
+            // remove the deleted item from the `UITableView`
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+        default:
+            return
+            
+        }
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
+        forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        // Remove separator inset
+        if cell.respondsToSelector("setSeparatorInset:") {
+            cell.separatorInset = UIEdgeInsetsZero
+        }
+        
+        // Prevent the cell from inheriting the Table View's margin settings
+        if cell.respondsToSelector("setPreservesSuperviewLayoutMargins:") {
+            cell.preservesSuperviewLayoutMargins = false
+        }
+        
+        // Explictly set your cell's layout margins
+        if cell.respondsToSelector("setLayoutMargins:") {
+            cell.layoutMargins = UIEdgeInsetsZero
+        }
     }
 
 }
