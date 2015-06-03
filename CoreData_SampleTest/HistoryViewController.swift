@@ -8,16 +8,29 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: GAITrackedViewController {
 
     var historyData = [DailyDairy]()
-    let appDel = UIApplication.sharedApplication().delegate as AppDelegate
+    let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         loadDairy()
+        
+        self.screenName = "History Screen"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.allowIDFACollection = false
+        tracker.set(kGAIScreenName, value: "HISTORY Screen")
+        
+        var build = GAIDictionaryBuilder.createScreenView().build() as [NSObject : AnyObject]
+        tracker.send(build)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +47,7 @@ class HistoryViewController: UIViewController {
         fetchReq.returnsObjectsAsFaults = false
         
         let data : [AnyObject] = managedCtx.executeFetchRequest(fetchReq, error: &error)!
-        historyData = data as [DailyDairy]
+        historyData = data as! [DailyDairy]
         println(data)
     }
 
@@ -53,7 +66,7 @@ class HistoryViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("dairyCellIdentifier") as UITableViewCell
+        var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("dairyCellIdentifier") as! UITableViewCell
         
         var formatter = NSDateFormatter()
         formatter.dateFormat = "YYYY-MM-dd hh:mm:ss a"

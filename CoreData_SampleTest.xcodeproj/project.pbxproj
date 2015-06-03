@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DA11D971B177BD400D9FE41 /* DailyDairy+TestCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA11D961B177BD400D9FE41 /* DailyDairy+TestCategory.m */; };
 		9DCD62421B0DEDBD009E3AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD62411B0DEDBD009E3AC2 /* AppDelegate.swift */; };
 		9DCD62451B0DEDBD009E3AC2 /* CoreData_SampleTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD62431B0DEDBD009E3AC2 /* CoreData_SampleTest.xcdatamodeld */; };
 		9DCD62471B0DEDBD009E3AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD62461B0DEDBD009E3AC2 /* ViewController.swift */; };
@@ -17,6 +18,12 @@
 		9DCE884F1B0F133C00B920FF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE884E1B0F133C00B920FF /* DatePickerViewController.swift */; };
 		9DCE88531B0F1AD800B920FF /* DailyDairy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE88521B0F1AD800B920FF /* DailyDairy.m */; };
 		9DCE885B1B0F378800B920FF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE885A1B0F378800B920FF /* HistoryViewController.swift */; };
+		9DCE885D1B10823A00B920FF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCE885C1B10823A00B920FF /* HealthKit.framework */; };
+		9DD34DD41B1C62DA007E9ADA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD34DD31B1C62DA007E9ADA /* iAd.framework */; };
+		9DECB0171B146813001FAAA6 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DECB00B1B146813001FAAA6 /* libGoogleAnalyticsServices.a */; };
+		9DECB0191B146841001FAAA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DECB0181B146841001FAAA6 /* SystemConfiguration.framework */; };
+		9DECB01B1B14684B001FAAA6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DECB01A1B14684B001FAAA6 /* libz.dylib */; };
+		9DECB01D1B146858001FAAA6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DECB01C1B146858001FAAA6 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DA11D951B177BD400D9FE41 /* DailyDairy+TestCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DailyDairy+TestCategory.h"; path = "CoreData_SampleTest/DailyDairy+TestCategory.h"; sourceTree = "<group>"; };
+		9DA11D961B177BD400D9FE41 /* DailyDairy+TestCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DailyDairy+TestCategory.m"; path = "CoreData_SampleTest/DailyDairy+TestCategory.m"; sourceTree = "<group>"; };
 		9DCD623C1B0DEDBD009E3AC2 /* CoreData_SampleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData_SampleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCD62401B0DEDBD009E3AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DCD62411B0DEDBD009E3AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +56,22 @@
 		9DCE88521B0F1AD800B920FF /* DailyDairy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyDairy.m; sourceTree = "<group>"; };
 		9DCE88541B0F1BA700B920FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9DCE885A1B0F378800B920FF /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		9DCE885C1B10823A00B920FF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		9DD34DD31B1C62DA007E9ADA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		9DECB00B1B146813001FAAA6 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		9DECB00D1B146813001FAAA6 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		9DECB00E1B146813001FAAA6 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		9DECB00F1B146813001FAAA6 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		9DECB0101B146813001FAAA6 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		9DECB0111B146813001FAAA6 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		9DECB0121B146813001FAAA6 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		9DECB0131B146813001FAAA6 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		9DECB0141B146813001FAAA6 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		9DECB0151B146813001FAAA6 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		9DECB0161B146813001FAAA6 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		9DECB0181B146841001FAAA6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9DECB01A1B14684B001FAAA6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9DECB01C1B146858001FAAA6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +79,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD34DD41B1C62DA007E9ADA /* iAd.framework in Frameworks */,
+				9DECB01D1B146858001FAAA6 /* libsqlite3.dylib in Frameworks */,
+				9DECB01B1B14684B001FAAA6 /* libz.dylib in Frameworks */,
+				9DECB0191B146841001FAAA6 /* SystemConfiguration.framework in Frameworks */,
+				9DCE885D1B10823A00B920FF /* HealthKit.framework in Frameworks */,
+				9DECB0171B146813001FAAA6 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +101,13 @@
 		9DCD62331B0DEDBD009E3AC2 = {
 			isa = PBXGroup;
 			children = (
+				9DD34DD31B1C62DA007E9ADA /* iAd.framework */,
+				9DA11D951B177BD400D9FE41 /* DailyDairy+TestCategory.h */,
+				9DA11D961B177BD400D9FE41 /* DailyDairy+TestCategory.m */,
+				9DECB01C1B146858001FAAA6 /* libsqlite3.dylib */,
+				9DECB01A1B14684B001FAAA6 /* libz.dylib */,
+				9DECB0181B146841001FAAA6 /* SystemConfiguration.framework */,
+				9DCE885C1B10823A00B920FF /* HealthKit.framework */,
 				9DCE88541B0F1BA700B920FF /* CoreData.framework */,
 				9DCD623E1B0DEDBD009E3AC2 /* CoreData_SampleTest */,
 				9DCD62571B0DEDBD009E3AC2 /* CoreData_SampleTestTests */,
@@ -89,6 +127,7 @@
 		9DCD623E1B0DEDBD009E3AC2 /* CoreData_SampleTest */ = {
 			isa = PBXGroup;
 			children = (
+				9DECB00A1B146813001FAAA6 /* GoogleAnalytics */,
 				9DCD62411B0DEDBD009E3AC2 /* AppDelegate.swift */,
 				9DCD62461B0DEDBD009E3AC2 /* ViewController.swift */,
 				9DCD62481B0DEDBD009E3AC2 /* Main.storyboard */,
@@ -128,6 +167,32 @@
 				9DCD62591B0DEDBD009E3AC2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DECB00A1B146813001FAAA6 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				9DECB00B1B146813001FAAA6 /* libGoogleAnalyticsServices.a */,
+				9DECB00C1B146813001FAAA6 /* Library */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		9DECB00C1B146813001FAAA6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9DECB00D1B146813001FAAA6 /* GAI.h */,
+				9DECB00E1B146813001FAAA6 /* GAIDictionaryBuilder.h */,
+				9DECB00F1B146813001FAAA6 /* GAIEcommerceFields.h */,
+				9DECB0101B146813001FAAA6 /* GAIEcommerceProduct.h */,
+				9DECB0111B146813001FAAA6 /* GAIEcommerceProductAction.h */,
+				9DECB0121B146813001FAAA6 /* GAIEcommercePromotion.h */,
+				9DECB0131B146813001FAAA6 /* GAIFields.h */,
+				9DECB0141B146813001FAAA6 /* GAILogger.h */,
+				9DECB0151B146813001FAAA6 /* GAITrackedViewController.h */,
+				9DECB0161B146813001FAAA6 /* GAITracker.h */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +299,7 @@
 				9DCD62471B0DEDBD009E3AC2 /* ViewController.swift in Sources */,
 				9DCE88531B0F1AD800B920FF /* DailyDairy.m in Sources */,
 				9DCE885B1B0F378800B920FF /* HistoryViewController.swift in Sources */,
+				9DA11D971B177BD400D9FE41 /* DailyDairy+TestCategory.m in Sources */,
 				9DCD62451B0DEDBD009E3AC2 /* CoreData_SampleTest.xcdatamodeld in Sources */,
 				9DCD62421B0DEDBD009E3AC2 /* AppDelegate.swift in Sources */,
 			);
@@ -294,7 +360,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viswanadh Akella (WHQB3RFJ54)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Viswanadh Akella (WHQB3RFJ54)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -338,7 +405,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viswanadh Akella (WHQB3RFJ54)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Viswanadh Akella (WHQB3RFJ54)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -363,10 +431,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viswanadh Akella (WHQB3RFJ54)";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CoreData_SampleTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoreData_SampleTest/GoogleAnalytics",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreData_SampleTest/CoreData_SampleTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -378,10 +452,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Viswanadh Akella (WHQB3RFJ54)";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CoreData_SampleTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoreData_SampleTest/GoogleAnalytics",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreData_SampleTest/CoreData_SampleTest-Bridging-Header.h";
 			};

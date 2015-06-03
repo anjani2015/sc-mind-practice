@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: GAITrackedViewController {
     
     var formatter = NSDateFormatter()
     @IBOutlet weak var activityDateTextField: UITextField!
@@ -21,6 +21,23 @@ class ViewController: UIViewController {
         
         formatter.dateFormat = "YYYY-MM-dd hh:mm:ss a"
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "selectedActivityDate:", name: "activityDate", object: nil)
+        
+        self.screenName = "Activity Entry Screen"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.allowIDFACollection = false
+        tracker.set(kGAIScreenName, value: "Activity Entry Screen")
+        
+        var build = GAIDictionaryBuilder.createScreenView().build() as [NSObject : AnyObject]
+        tracker.send(build)
+    }
+    
+    func hello(){
+        println("Hello")
     }
 
     deinit{
@@ -34,17 +51,17 @@ class ViewController: UIViewController {
 
     func selectedActivityDate(notification : NSNotification)
     {
-        let activityDate = formatter.stringFromDate(notification.object as NSDate)
+        let activityDate = formatter.stringFromDate(notification.object as! NSDate)
         println(activityDate)
         self.activityDateTextField.text = activityDate
     }
     
     @IBAction func save_TouchUpInside(sender: UIButton) {
         
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedCtxt = appDel.managedObjectContext!
         
-        let dairyDataTemp = NSEntityDescription.insertNewObjectForEntityForName("DailyDairy", inManagedObjectContext: managedCtxt) as DailyDairy
+        let dairyDataTemp = NSEntityDescription.insertNewObjectForEntityForName("DailyDairy", inManagedObjectContext: managedCtxt) as! DailyDairy
         
         dairyDataTemp.activityOnDate = formatter.dateFromString(self.activityDateTextField.text)
         dairyDataTemp.activityDesc = activityTextView.text

@@ -13,10 +13,24 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var tracker :GAITracker!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Optional: automatically send uncaught exceptions to Google Analytics.
+        GAI.sharedInstance().trackUncaughtExceptions = true
+        
+        // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+        GAI.sharedInstance().dispatchInterval = 20
+        
+        // Optional: set Logger to VERBOSE for debug information.
+        GAI.sharedInstance().logger.logLevel = GAILogLevel.Verbose
+        
+        // Initialize tracker. Replace with your tracking ID.
+        tracker = GAI.sharedInstance().trackerWithTrackingId("UA-63361894-1")
+        
+        
         return true
     }
 
@@ -49,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.sap.DS4M.iWatchApp.CoreData_SampleTest" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] as! NSURL
     }(())
 
     lazy var managedObjectModel: NSManagedObjectModel = {
